@@ -103,7 +103,7 @@ export default function Projects() {
               className={`relative group ${project.featured ? 'md:col-span-1' : ''}`}
             >
               {/* Card */}
-              <div className="h-full glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 border-2 border-transparent hover:border-primary-500/30">
+              <div className="h-full glass-effect rounded-2xl p-6 transition-all duration-500 border-2 border-transparent hover:border-primary-500/30 relative z-10">
                 {/* Featured Badge */}
                 {project.featured && (
                   <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full text-xs font-semibold">

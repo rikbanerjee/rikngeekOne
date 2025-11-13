@@ -73,7 +73,7 @@ export default function STEMEducation() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group"
+              className="glass-effect rounded-2xl p-6 transition-all duration-500 group relative z-10"
             >
               {/* Icon */}
               <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${resource.color} p-3 mb-4`}>
@@ -111,7 +111,7 @@ export default function STEMEducation() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="glass-effect rounded-2xl p-8 text-center"
+          className="glass-effect rounded-2xl p-8 text-center relative z-10"
         >
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">

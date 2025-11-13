@@ -67,7 +67,7 @@ export default function Research() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group"
+              className="glass-effect rounded-2xl p-6 transition-all duration-500 group relative z-10"
             >
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                 <div className="flex-1">

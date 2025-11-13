@@ -102,7 +102,7 @@ export default function Resume() {
 
               <div className="space-y-6">
                 {experience.map((job, index) => (
-                  <div key={index} className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div key={index} className="glass-effect rounded-xl p-6 transition-all duration-500 relative z-10">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3">
                       <div>
                         <h4 className="text-xl font-bold text-white">{job.title}</h4>
@@ -140,7 +140,7 @@ export default function Resume() {
 
               <div className="space-y-4">
                 {education.map((edu, index) => (
-                  <div key={index} className="glass-effect rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div key={index} className="glass-effect rounded-xl p-6 transition-all duration-500 relative z-10">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
                       <div>
                         <h4 className="text-lg font-bold text-white">{edu.degree}</h4>

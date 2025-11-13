@@ -76,7 +76,7 @@ export default function Navigation() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden glass-effect"
+          className="md:hidden glass-effect relative z-10"
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (

@@ -65,7 +65,7 @@ export default function Blog() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 group"
+              className="glass-effect rounded-2xl overflow-hidden transition-all duration-500 group relative z-10"
             >
               {/* Image Placeholder */}
               <div className={`h-48 bg-gradient-to-br ${
