@@ -5,49 +5,80 @@ import { Download, Briefcase, GraduationCap, Award, Code2 } from 'lucide-react'
 
 const experience = [
   {
-    title: 'Senior AI Engineer',
-    company: 'Tech Innovations Inc.',
-    period: '2022 - Present',
-    description: 'Leading AI research and development initiatives, building production ML systems.',
+    title: 'Lead Director, In-Store AI, Technology & Omni-channel',
+    company: 'CVS Health',
+    period: 'Sep 2022 - Present',
+    description: 'Leading engineering teams building AI systems that power America\'s largest pharmacy retailer, serving 120M+ customers and 300K colleagues.',
     achievements: [
-      'Architected and deployed 5+ ML models serving 1M+ users',
-      'Led team of 8 engineers on AI product development',
-      'Reduced model inference latency by 60%',
+      '$90M+ annual savings through Gen AI/ML models and agentic workflows',
+      'Modernized $50B+ POS transaction platform across 9,500+ stores',
+      'Led 60-100+ cross-functional engineers building StoreOS with edge computing & computer vision',
+      'Launched patented Virtual Verification AI and biometric authentication systems',
+      'Built AI-driven pill verification, inventory detection, and omnichannel ad-tech',
     ],
   },
   {
-    title: 'Machine Learning Engineer',
-    company: 'AI Solutions Corp',
-    period: '2020 - 2022',
-    description: 'Developed and optimized machine learning pipelines for enterprise applications.',
+    title: 'Sr. Manager, Pharmacy POS & Store Applications',
+    company: 'CVS Health',
+    period: 'Sep 2020 - Aug 2022',
+    description: 'Managed engineering, product, and UX for StoreFront delivery, mobility apps, and pharmacy POS applications.',
     achievements: [
-      'Built scalable MLOps infrastructure using Kubernetes',
-      'Improved model accuracy by 25% through novel techniques',
-      'Published 3 research papers in top-tier conferences',
+      'Led architecture and engineering for ~10K stores pharmacy modernization',
+      'Built vaccine administration platform (including Covid-19)',
+      'Implemented state-of-the-art @Edge engineering for analytics',
+      'Delivered unified retail/pharmacy experience across all store modals',
+    ],
+  },
+  {
+    title: 'Sr. Manager, Pharmacy POS',
+    company: 'CVS Health',
+    period: 'Feb 2020 - Sep 2020',
+    description: 'Rebuilt Pharmacy POS on web platform for unified experience across CVS and Target stores.',
+    achievements: [
+      'Unified POS experience across all store modals',
+      'Built SRE team for product reliability tracking',
+      'Modernized pharmacy applications architecture',
+    ],
+  },
+  {
+    title: 'Sr. IT Consultant & Java Developer',
+    company: 'Cognizant Technology Solutions',
+    period: 'Jan 2007 - Aug 2012',
+    description: 'Lead developer for enterprise applications at Staples Inc. and innovation projects at Java Center of Excellence.',
+    achievements: [
+      'Led distributed teams on next-gen web applications',
+      'Built SOA-based product management systems',
+      'Developed real-time messaging frameworks',
     ],
   },
 ]
 
 const education = [
   {
-    degree: 'Ph.D. in Computer Science',
-    school: 'Stanford University',
-    period: '2016 - 2020',
-    focus: 'Artificial Intelligence & Machine Learning',
+    degree: 'Executive Education - Competing in the Age of AI',
+    school: 'Harvard Business School',
+    period: 'Sep 2021 - Nov 2021',
+    focus: 'AI Strategy and Business Transformation',
   },
   {
-    degree: 'M.S. in Computer Science',
-    school: 'MIT',
-    period: '2014 - 2016',
-    focus: 'Computer Science',
+    degree: 'Professional Education - Internet of Things',
+    school: 'Massachusetts Institute of Technology (MIT)',
+    period: 'May 2017 - Aug 2017',
+    focus: 'IoT: Roadmap to a Connected World',
+  },
+  {
+    degree: 'B.Tech in Electronics and Communication Engineering',
+    school: 'Jawaharlal Nehru Technological University',
+    period: '2003 - 2007',
+    focus: 'Electronics & Communication Engineering',
   },
 ]
 
 const skills = [
-  { category: 'Languages', items: ['Python', 'TypeScript', 'C++', 'R', 'Julia'] },
-  { category: 'ML/AI', items: ['PyTorch', 'TensorFlow', 'Transformers', 'scikit-learn', 'JAX'] },
-  { category: 'Cloud & DevOps', items: ['AWS', 'GCP', 'Docker', 'Kubernetes', 'MLflow'] },
-  { category: 'Web & Tools', items: ['React', 'Next.js', 'FastAPI', 'Git', 'Linux'] },
+  { category: 'Leadership', items: ['Engineering Leadership', 'Product Management', 'AI Strategy', 'Strategic Roadmaps', 'Team Building'] },
+  { category: 'AI/ML Expertise', items: ['Gen AI', 'Agentic Systems', 'Computer Vision', 'ML Models', 'Edge AI', 'MLOps'] },
+  { category: 'Architecture', items: ['Enterprise Architecture', 'Distributed Systems', 'Edge Computing', 'Kafka/SRE', 'Cloud Infrastructure'] },
+  { category: 'Product & Tech', items: ['Omnichannel', 'E-commerce', 'Ad-Tech', 'POS Systems', 'DevOps', 'Reliability Engineering'] },
 ]
 
 export default function Resume() {
@@ -70,7 +101,7 @@ export default function Resume() {
             <span className="gradient-text">Resume</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
-            Experience, education, and expertise in AI engineering
+            Director of Engineering | Gen AI & Agentic AI | 18+ Years Transforming Enterprise Operations
           </p>
           <motion.a
             href="#"
@@ -148,7 +179,13 @@ export default function Resume() {
                       </div>
                       <span className="text-sm text-gray-400 mt-1 sm:mt-0">{edu.period}</span>
                     </div>
-                    <p className="text-sm text-gray-400">Focus: {edu.focus}</p>
+                    <p className="text-sm text-gray-400 mb-2">Focus: {edu.focus}</p>
+                    {edu.award && (
+                      <div className="flex items-center gap-2 mt-2">
+                        <Award className="w-4 h-4 text-yellow-500" />
+                        <span className="text-sm text-yellow-500/80">{edu.award}</span>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -205,16 +242,30 @@ export default function Resume() {
               </div>
 
               <div className="glass-effect rounded-xl p-6 space-y-3">
-                {[
-                  'AWS Certified ML Specialist',
-                  'Google Cloud Professional ML Engineer',
-                  'Deep Learning Specialization',
-                ].map((cert, index) => (
-                  <div key={index} className="flex items-center gap-2 text-gray-300">
-                    <Award className="w-4 h-4 text-primary-400 flex-shrink-0" />
-                    <span className="text-sm">{cert}</span>
-                  </div>
-                ))}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-primary-400 mb-3">Patents</h4>
+                  {[
+                    'Virtual Verification in Pharmacy Workflow (Patent #20240249428)',
+                    'Automated Prescription Product Counting (Patent #20210374762)',
+                  ].map((cert, index) => (
+                    <div key={index} className="flex items-start gap-2 text-gray-300 mb-2">
+                      <Award className="w-4 h-4 text-yellow-500 flex-shrink-0 mt-1" />
+                      <span className="text-sm">{cert}</span>
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-primary-400 mb-3">Certifications</h4>
+                  {[
+                    'Professional Scrum Master - PSM 1 (Scrum.org)',
+                    'Strategic Thinking Habit (LinkedIn Learning)',
+                  ].map((cert, index) => (
+                    <div key={index} className="flex items-center gap-2 text-gray-300 mb-2">
+                      <Award className="w-4 h-4 text-primary-400 flex-shrink-0" />
+                      <span className="text-sm">{cert}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>
