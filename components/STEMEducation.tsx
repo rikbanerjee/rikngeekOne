@@ -119,7 +119,7 @@ export default function STEMEducation() {
             </h3>
             <p className="text-gray-400 mb-6">
               I believe every child should have access to quality STEM education. Through engaging content,
-              interactive projects, and accessible resources, I'm working to make science and technology
+              interactive projects, and accessible resources, I&apos;m working to make science and technology
               education fun, inclusive, and inspiring for learners of all backgrounds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -83,7 +83,7 @@ export default function Projects() {
             <span className="gradient-text">AI Projects</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Cutting-edge AI solutions pushing the boundaries of what's possible
+            Cutting-edge AI solutions pushing the boundaries of what&apos;s possible
           </p>
         </motion.div>
 
