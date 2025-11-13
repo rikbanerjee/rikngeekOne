@@ -179,13 +179,7 @@ export default function Resume() {
                       </div>
                       <span className="text-sm text-gray-400 mt-1 sm:mt-0">{edu.period}</span>
                     </div>
-                    <p className="text-sm text-gray-400 mb-2">Focus: {edu.focus}</p>
-                    {edu.award && (
-                      <div className="flex items-center gap-2 mt-2">
-                        <Award className="w-4 h-4 text-yellow-500" />
-                        <span className="text-sm text-yellow-500/80">{edu.award}</span>
-                      </div>
-                    )}
+                    <p className="text-sm text-gray-400">Focus: {edu.focus}</p>
                   </div>
                 ))}
               </div>
