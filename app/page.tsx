@@ -5,7 +5,7 @@ import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import Projects from '@/components/Projects'
 import Blog from '@/components/Blog'
-import Research from '@/components/Research'
+// import Research from '@/components/Research'
 import STEMEducation from '@/components/STEMEducation'
 import Resume from '@/components/Resume'
 import Footer from '@/components/Footer'
@@ -17,7 +17,7 @@ export default function Home() {
       <Hero />
       <Projects />
       <Blog />
-      <Research />
+      {/* <Research /> */}
       <STEMEducation />
       <Resume />
       <Footer />

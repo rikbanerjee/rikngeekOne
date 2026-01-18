@@ -5,28 +5,22 @@ import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react'
 
 const blogPosts = [
   {
-    title: 'The Future of Large Language Models',
-    excerpt: 'Exploring the evolution of LLMs and their impact on AI applications, from GPT-4 to multimodal models.',
-    date: '2024-11-08',
-    readTime: '8 min read',
-    category: 'AI Research',
+    title: 'Retail Innovation Hub: AI, POS & Digital Transformation',
+    excerpt: 'Linked In Group:Explore the latest trends in retail technology and how AI is transforming the industry.',
+    date: '2025-11-08',
+    readTime: '5 min reads',
+    category: 'Retail Technology',
     image: 'gradient-1',
+    link: 'https://www.linkedin.com/groups/13186555/',
   },
   {
-    title: 'Building Production-Ready AI Systems',
+    title: 'Building POS Modernization -Scale up Legacy Hardware with Bespoke Solutions',
     excerpt: 'Best practices for deploying machine learning models at scale with reliability and performance.',
-    date: '2024-10-25',
-    readTime: '12 min read',
-    category: 'Engineering',
+    date: '2026-01-17',
+    readTime: '5 min reads',
+    category: 'Retail Technology',
     image: 'gradient-2',
-  },
-  {
-    title: 'Neural Architecture Search Explained',
-    excerpt: 'A deep dive into automated machine learning and how NAS is revolutionizing model design.',
-    date: '2024-10-10',
-    readTime: '10 min read',
-    category: 'Deep Learning',
-    image: 'gradient-3',
+    link: '#',
   },
 ]
 

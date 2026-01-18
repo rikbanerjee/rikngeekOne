@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Download, Briefcase, GraduationCap, Award, Code2 } from 'lucide-react'
+import { Briefcase, GraduationCap, Award, Code2 } from 'lucide-react'
 
 const experience = [
   {
@@ -14,7 +14,9 @@ const experience = [
       'Modernized $50B+ POS transaction platform across 9,500+ stores',
       'Led 60-100+ cross-functional engineers building StoreOS with edge computing & computer vision',
       'Launched patented Virtual Verification AI and biometric authentication systems',
-      'Built AI-driven pill verification, inventory detection, and omnichannel ad-tech',
+      'Built AI-driven pill verification, inventory detection, and omnichannel CMX/ Retail Ad-Tech',
+      'Computer Vision for inventory detection and shelf management- CPU@Edge AI Computing',
+      'Agentic platform - storeOS - with seamless biomteric authentication, connected journey mapping, and AI-driven recommendations'
     ],
   },
   {
@@ -54,6 +56,12 @@ const experience = [
 ]
 
 const education = [
+  {
+    degree: 'Professional Education - Applied Agentic AI for Organizational Transformation',
+    school: 'Massachusetts Institute of Technology (MIT)',
+    period: 'Sep 2025 - Nov 2025',
+    focus: 'Applied Agentic AI for Organizational Transformation',
+  },
   {
     degree: 'Executive Education - Competing in the Age of AI',
     school: 'Harvard Business School',
@@ -100,18 +108,9 @@ export default function Resume() {
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="gradient-text">Resume</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Director of Engineering | Gen AI & Agentic AI | 18+ Years Transforming Enterprise Operations
           </p>
-          <motion.a
-            href="#"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/50"
-          >
-            <Download className="w-5 h-5" />
-            Download Resume
-          </motion.a>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -174,7 +173,7 @@ export default function Resume() {
                   <div key={index} className="glass-effect rounded-xl p-6 transition-all duration-500 relative z-10">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
                       <div>
-                        <h4 className="text-lg font-bold text-white">{edu.degree}</h4>
+                        <h4 className="text-lg font-bold text-white graduate-text">{edu.degree}</h4>
                         <p className="text-primary-400">{edu.school}</p>
                       </div>
                       <span className="text-sm text-gray-400 mt-1 sm:mt-0">{edu.period}</span>
@@ -252,7 +251,7 @@ export default function Resume() {
                   <h4 className="text-sm font-semibold text-primary-400 mb-3">Certifications</h4>
                   {[
                     'Professional Scrum Master - PSM 1 (Scrum.org)',
-                    'Strategic Thinking Habit (LinkedIn Learning)',
+                    'Java Certified Professional - JCP (Sun Microsystems)',
                   ].map((cert, index) => (
                     <div key={index} className="flex items-center gap-2 text-gray-300 mb-2">
                       <Award className="w-4 h-4 text-primary-400 flex-shrink-0" />

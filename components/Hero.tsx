@@ -23,7 +23,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect mb-8"
           >
             <Sparkles className="w-4 h-4 text-primary-400" />
-            <span className="text-sm text-gray-300">AI Engineer & Researcher</span>
+            <span className="text-sm text-gray-300">Director of Engineering @ CVS Health • Gen AI & Agentic AI</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -45,8 +45,9 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
           >
-            Exploring cutting-edge AI technologies, sharing research insights, 
-            and empowering the next generation through STEM education.
+            Director of Engineering at CVS Health transforming enterprise operations through Gen AI and Agentic AI—delivering 
+            $90M+ annual savings at scale. Leading teams of 60-100+ engineers building AI systems that power America&apos;s 
+            largest pharmacy retailer, serving 120M+ customers and 300K colleagues daily.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -67,7 +68,7 @@ export default function Hero() {
               href="#resume"
               className="px-8 py-4 glass-effect hover:bg-white/10 text-white rounded-lg font-semibold transition-all duration-300"
             >
-              Download Resume
+              View Resume
             </a>
           </motion.div>
 

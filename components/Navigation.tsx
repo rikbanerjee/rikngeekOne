@@ -8,7 +8,7 @@ const navItems = [
   { name: 'Home', href: '#home' },
   { name: 'Projects', href: '#projects' },
   { name: 'Blog', href: '#blog' },
-  { name: 'Research', href: '#research' },
+  // { name: 'Research', href: '#research' },
   { name: 'STEM Ed', href: '#stem' },
   { name: 'Resume', href: '#resume' },
 ]

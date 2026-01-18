@@ -5,13 +5,13 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Rik Banerjee - AI Engineer & Researcher',
-  description: 'Portfolio showcasing AI projects, research articles, blogs, and STEM education resources by Rik Banerjee',
-  keywords: ['AI', 'Machine Learning', 'Portfolio', 'Research', 'STEM Education', 'Projects'],
+  title: 'Rik Banerjee - Director of Engineering | Gen AI & Agentic AI @ CVS Health',
+  description: 'Director of Engineering at CVS Health leading Gen AI and Agentic AI initiatives. Built AI systems delivering $90M+ annual savings, modernized $50B+ POS platform serving 120M+ customers. 18+ years transforming enterprise operations through AI innovation.',
+  keywords: ['Gen AI', 'Agentic AI', 'Engineering Director', 'CVS Health', 'AI Strategy', 'Machine Learning', 'Edge Computing', 'Computer Vision', 'Enterprise AI', 'Healthcare Technology', 'Retail Innovation', 'Product Engineering', 'AI Patents'],
   authors: [{ name: 'Rik Banerjee' }],
   openGraph: {
-    title: 'Rik Banerjee - AI Engineer & Researcher',
-    description: 'Portfolio showcasing AI projects, research articles, and more',
+    title: 'Rik Banerjee - Director of Engineering | Gen AI & Agentic AI',
+    description: 'Engineering leader transforming enterprise operations through Gen AI—delivering $90M+ annual savings at CVS Health',
     type: 'website',
   },
 }

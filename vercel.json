@@ -6,6 +6,16 @@
   "regions": ["iad1"],
   "github": {
     "silent": true
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/projects/stockOS",
+      "destination": "https://stock-analysis-103702095556.us-central1.run.app"
+    },
+    {
+      "source": "/projects/stockOS/:path*",
+      "destination": "https://stock-analysis-103702095556.us-central1.run.app/:path*"
+    }
+  ]
 }
 
