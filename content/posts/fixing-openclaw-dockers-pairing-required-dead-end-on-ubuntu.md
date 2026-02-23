@@ -15,7 +15,6 @@ tags:
 author: "RikNGeek"
 ---
 
-# Fixing OpenClaw Docker's "Pairing Required" Dead End on Ubuntu
 
 **Author:** Rik Banerjee  
 **Date:** February 2026  

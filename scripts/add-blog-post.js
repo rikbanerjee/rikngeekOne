@@ -226,7 +226,7 @@ ${tagsYaml}
 author: "RikNGeek"
 ---
 
-${cleanContent}
+${bodyAfterH1.trim()}
 `;
 
     fs.writeFileSync(destPath, output, 'utf8');

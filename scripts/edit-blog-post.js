@@ -113,7 +113,7 @@ async function main() {
         const mdPath = await ask(iface, '  Path to new .md content file: ');
         const p = path.resolve(mdPath);
         if (!fs.existsSync(p)) { console.error('\n  ❌  File not found.'); iface.close(); return; }
-        const newBody = fs.readFileSync(p, 'utf8').replace(/^---[\s\S]*?---\n?/, '').trim();
+        const newBody = fs.readFileSync(p, 'utf8').replace(/^---[\s\S]*?---\n?/, '').replace(/^# .+\n?/, '').trim();
         content = content.replace(/^---[\s\S]*?---\n?/m, match => match).replace(/(?<=---\n[\s\S]*?---\n)[\s\S]*/, '\n' + newBody + '\n');
 
     } else if (opt === '4') {
@@ -149,7 +149,7 @@ async function main() {
         const p = path.resolve(mdPath);
         if (!fs.existsSync(p)) { console.error('\n  ❌  File not found.'); iface.close(); return; }
         // Re-run add-blog-post logic is out of scope here; just update content body
-        const newBody = fs.readFileSync(p, 'utf8').replace(/^---[\s\S]*?---\n?/, '').trim();
+        const newBody = fs.readFileSync(p, 'utf8').replace(/^---[\s\S]*?---\n?/, '').replace(/^# .+\n?/, '').trim();
         content = content.replace(/(?<=^---[\s\S]*?---\n)[\s\S]*/m, '\n' + newBody + '\n');
         console.log('  ✓  Content replaced. Frontmatter unchanged — edit fields 1-8 to update metadata.');
     }
