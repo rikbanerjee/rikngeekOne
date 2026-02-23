@@ -11,7 +11,7 @@ const footerLinks = {
         { name: 'Home', href: '#home' },
         { name: 'Projects', href: '#projects' },
         { name: 'Blog', href: '#blog' },
-        { name: 'Research', href: '#research' },
+        // { name: 'Research', href: '#research' },
       ],
     },
     {
@@ -19,7 +19,7 @@ const footerLinks = {
       links: [
         { name: 'STEM Education', href: '#stem' },
         { name: 'Resume', href: '#resume' },
-        { name: 'Publications', href: '#research' },
+        // { name: 'Publications', href: '#research' },
         { name: 'Contact', href: '#contact' },
       ],
     },
@@ -27,9 +27,9 @@ const footerLinks = {
       title: 'Connect',
       links: [
         { name: 'LinkedIn', href: 'https://www.linkedin.com/in/rik-banerjee/' },
-        { name: 'GitHub', href: 'https://github.com' },
+        { name: 'GitHub', href: 'https://github.com/rikbanerjee' },
         { name: 'Twitter', href: 'https://twitter.com' },
-        { name: 'Email', href: 'mailto:contact@rikbanerjee.com' },
+        { name: 'Email', href: 'mailto:rikbanerjee007@gmail.com' },
       ],
     },
   ],
