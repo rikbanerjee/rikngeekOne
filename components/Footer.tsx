@@ -17,6 +17,7 @@ const footerLinks = {
     {
       title: 'Resources',
       links: [
+        { name: 'Speaker Bio', href: '/bio' },
         { name: 'STEM Education', href: '#stem' },
         { name: 'Resume', href: '#resume' },
         // { name: 'Publications', href: '#research' },
