@@ -103,12 +103,23 @@ export default function BlogPage() {
                                         </div>
                                     )}
 
-                                    <Link
-                                        href={`/blog/${post.slug}`}
-                                        className="flex items-center gap-2 text-primary-400 hover:text-primary-300 text-sm font-medium transition-all duration-300 group-hover:gap-3"
-                                    >
-                                        Read article <ArrowRight className="w-4 h-4" />
-                                    </Link>
+                                    {post.externalLink ? (
+                                        <a
+                                            href={post.externalLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 text-primary-400 hover:text-primary-300 text-sm font-medium transition-all duration-300 group-hover:gap-3"
+                                        >
+                                            Read on Substack <ArrowRight className="w-4 h-4" />
+                                        </a>
+                                    ) : (
+                                        <Link
+                                            href={`/blog/${post.slug}`}
+                                            className="flex items-center gap-2 text-primary-400 hover:text-primary-300 text-sm font-medium transition-all duration-300 group-hover:gap-3"
+                                        >
+                                            Read article <ArrowRight className="w-4 h-4" />
+                                        </Link>
+                                    )}
                                 </div>
                             </article>
                         ))}

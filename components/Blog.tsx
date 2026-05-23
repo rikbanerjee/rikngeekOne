@@ -16,6 +16,7 @@ interface PostMeta {
   categoryColor: string
   image: string
   tags: string[]
+  externalLink?: string
 }
 
 interface Props {
@@ -96,13 +97,25 @@ export default function Blog({ posts }: Props) {
                     <Clock className="w-4 h-4" />
                     <span>{post.readTime}</span>
                   </div>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors duration-300 group-hover:gap-3"
-                  >
-                    <span className="text-sm font-medium">Read More</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  {post.externalLink ? (
+                    <a
+                      href={post.externalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors duration-300 group-hover:gap-3"
+                    >
+                      <span className="text-sm font-medium">Read on Substack</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  ) : (
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors duration-300 group-hover:gap-3"
+                    >
+                      <span className="text-sm font-medium">Read More</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  )}
                 </div>
               </div>
             </motion.article>

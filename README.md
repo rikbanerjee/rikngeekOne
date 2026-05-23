@@ -279,6 +279,9 @@ npm run delete-post
 # Preview locally before publishing
 npm start
 
+# Fetch and sync posts from your Substack RSS feed
+npm run sync-substack
+
 # Push to git → triggers Vercel auto-deploy
 npm run deploy
 ```

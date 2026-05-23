@@ -79,6 +79,21 @@ export default async function PostPage(props: Props) {
                     {post.title}
                 </h1>
 
+                {/* Substack Link */}
+                {post.externalLink && (
+                    <div className="mb-10 bg-slate-800/50 border border-primary-500/30 p-6 rounded-xl text-center">
+                        <p className="text-gray-300 mb-4">This article was originally published on Substack.</p>
+                        <a 
+                            href={post.externalLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-semibold transition-all duration-300"
+                        >
+                            Read full article on Substack <ArrowRight className="w-4 h-4" />
+                        </a>
+                    </div>
+                )}
+
                 {/* Tags */}
                 {post.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 mb-10">

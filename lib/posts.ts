@@ -17,6 +17,7 @@ export interface PostMeta {
     image: string
     tags: string[]
     author: string
+    externalLink?: string
 }
 
 export interface Post extends PostMeta {
@@ -66,6 +67,7 @@ export function getAllPosts(): PostMeta[] {
                 image: data.image ?? '',
                 tags: data.tags ?? [],
                 author: data.author ?? 'RikNGeek',
+                externalLink: data.externalLink,
             } satisfies PostMeta
         })
         .sort((a, b) => (a.date < b.date ? 1 : -1))   // newest first
@@ -94,6 +96,7 @@ export async function getPost(slug: string): Promise<Post | null> {
         image: data.image ?? '',
         tags: data.tags ?? [],
         author: data.author ?? 'RikNGeek',
+        externalLink: data.externalLink,
         content: htmlContent,
     }
 }
