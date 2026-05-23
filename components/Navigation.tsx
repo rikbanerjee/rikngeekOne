@@ -5,11 +5,11 @@ import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
 const navItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'Projects', href: '#projects' },
+  { name: 'Home', href: '/' },
+  { name: 'Projects', href: '/#projects' },
   { name: 'Blog', href: '/blog' },
-  { name: 'STEM Ed', href: '#stem' },
-  { name: 'Resume', href: '#resume' },
+  { name: 'STEM Ed', href: '/#stem' },
+  { name: 'Resume', href: '/#resume' },
 ]
 
 export default function Navigation() {
@@ -36,7 +36,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <motion.a
-            href="#home"
+            href="/"
             className="text-2xl font-bold gradient-text"
             whileHover={{ scale: 1.05 }}
           >
