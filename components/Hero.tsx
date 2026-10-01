@@ -20,10 +20,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect mb-8"
+            className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 rounded-2xl glass-effect mb-8"
           >
-            <Sparkles className="w-4 h-4 text-primary-400" />
-            <span className="text-sm text-gray-300">Director of Engineering @ CVS Health • Gen AI & Agentic AI</span>
+            <Sparkles className="hidden sm:block w-4 h-4 shrink-0 text-primary-400" />
+            <span className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              <span className="block">Sr. Technology Leader @ CVS Health</span>
+              <span className="block">Gen AI • Edge AI • Physical AI at Retail Scale</span>
+            </span>
           </motion.div>
 
           {/* Main Heading */}
