@@ -1,9 +1,28 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Brain, TrendingUp, Zap, Bot } from 'lucide-react'
+import { ExternalLink, Github, Brain, TrendingUp, Bot, ShoppingCart, Camera } from 'lucide-react'
 
 const projects = [
+  {
+    title: 'RetailAgentOS',
+    description: 'Agentic commerce infrastructure: a reasoning layer that lets AI shopping assistants understand and enforce retailer-specific rules (pricing, eligibility, inventory, fulfillment) before checkout, so the cart actually works. Explainable decisions, open specifications and a tested reference engine.',
+    tags: ['Agentic Commerce', 'AI Agents', 'Retail', 'WebMCP', 'Reasoning Layer', 'Open Specs'],
+    icon: ShoppingCart,
+    color: 'from-orange-500 to-rose-500',
+    demoLink: 'https://retailagentos.com',
+    flagship: true,
+    featured: true,
+  },
+  {
+    title: 'ezyUpload',
+    description: 'Marketplace-ready product photos. Prepare and optimize product images for online marketplaces and retail listings without a photo studio.',
+    tags: ['E-commerce', 'Product Photography', 'Marketplaces', 'AI', 'Retail'],
+    icon: Camera,
+    color: 'from-sky-500 to-indigo-500',
+    demoLink: 'https://ezyupload.com',
+    featured: true,
+  },
   {
     title: 'Quant Alpha AI',
     description: 'Advanced quantitative trading algorithms powered by machine learning for alpha generation and portfolio optimization.',
@@ -90,14 +109,14 @@ export default function Projects() {
               key={project.title}
               variants={itemVariants}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className={`relative group ${project.featured ? 'md:col-span-1' : ''}`}
+              className={`relative group ${project.flagship ? 'md:col-span-2' : 'md:col-span-1'}`}
             >
               {/* Card */}
-              <div className="h-full glass-effect rounded-2xl p-6 transition-all duration-500 border-2 border-transparent hover:border-primary-500/30 relative z-10">
+              <div className={`h-full glass-effect rounded-2xl p-6 transition-all duration-500 border-2 hover:border-primary-500/30 relative z-10 ${project.flagship ? 'border-primary-500/40 md:p-8' : 'border-transparent'}`}>
                 {/* Featured Badge */}
                 {project.featured && (
                   <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full text-xs font-semibold">
-                    Featured
+                    {project.flagship ? 'Flagship' : 'Featured'}
                   </div>
                 )}
 
@@ -108,7 +127,7 @@ export default function Projects() {
 
                 {/* Content */}
                 <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
-                <p className="text-gray-400 mb-4 line-clamp-3">{project.description}</p>
+                <p className={`text-gray-400 mb-4 ${project.flagship ? '' : 'line-clamp-3'}`}>{project.description}</p>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -126,18 +145,21 @@ export default function Projects() {
                 <div className="flex gap-4">
                   <a
                     href={project.demoLink}
+                    {...(project.demoLink.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors duration-300"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    <span className="text-sm font-medium">Live Demo</span>
+                    <span className="text-sm font-medium">{project.flagship ? 'Visit Site' : 'Live Demo'}</span>
                   </a>
-                  <a
-                    href={project.githubLink}
-                    className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
-                  >
-                    <Github className="w-4 h-4" />
-                    <span className="text-sm font-medium">Code</span>
-                  </a>
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
+                    >
+                      <Github className="w-4 h-4" />
+                      <span className="text-sm font-medium">Code</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

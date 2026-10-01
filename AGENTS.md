@@ -16,6 +16,10 @@ This project originally had a single-page portfolio with a hardcoded `Blog.tsx` 
 | `/blog`                     | `app/blog/page.tsx`                     | All posts listing with category filter |
 | `/blog/[slug]`              | `app/blog/[slug]/page.tsx`              | Individual post (static generated)     |
 | `/blog/category/[category]` | `app/blog/category/[category]/page.tsx` | Per-category listing                   |
+| `/blog/page/[page]`         | `app/blog/page/[page]/page.tsx`         | All-posts listing, pages 2+            |
+| `/blog/category/[category]/page/[page]` | `app/blog/category/[category]/page/[page]/page.tsx` | Per-category listing, pages 2+ |
+
+**Pagination:** listings show `POSTS_PER_PAGE` (25, in `lib/posts.ts`) posts per page. Page 1 is the base route; pages 2+ are statically generated via `extraPageNumbers()`, and out-of-range pages 404 (`dynamicParams = false`). Shared UI lives in `components/BlogIndex.tsx`, `components/CategoryIndex.tsx`, `components/PostCard.tsx` and `components/Pagination.tsx`.
 
 ### New library:
 | File           | Purpose                                                                                                                |

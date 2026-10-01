@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Calendar, Clock, ArrowRight, BookOpen, Tag } from 'lucide-react'
 import Link from 'next/link'
+import SwatchCover from '@/components/SwatchCover'
 
 // Homepage blog section shows latest 3 posts fetched at build time via a data prop.
 // The actual data is passed from the server component in page.tsx.
@@ -70,7 +71,7 @@ export default function Blog({ posts }: Props) {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 ) : (
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600/30 to-accent-600/30" />
+                  <SwatchCover seed={post.slug} className="group-hover:scale-105 transition-transform duration-500" />
                 )}
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
               </div>

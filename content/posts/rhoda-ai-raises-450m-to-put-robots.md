@@ -6,7 +6,7 @@ readTime: "1 min read"
 category: "Tech Observations"
 categorySlug: "tech-observations"
 categoryColor: "bg-orange-100 text-orange-800"
-image: "https://substackcdn.com/image/fetch/$s_!aAbE!,w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe1d1157f-b4a1-4e6e-960e-ac83e65ae617_144x144.png"
+image: ""
 tags:
   - "Substack"
 author: "Rik"

@@ -77,6 +77,26 @@ export function getPostsByCategory(categorySlug: string): PostMeta[] {
     return getAllPosts().filter(p => p.categorySlug === categorySlug)
 }
 
+// ── Pagination ────────────────────────────────────────────────
+// Page 1 lives at the base route (/blog, /blog/category/ai);
+// pages 2+ live at <base>/page/<n> and are statically generated.
+export const POSTS_PER_PAGE = 25
+
+export function getPageCount(totalPosts: number): number {
+    return Math.max(1, Math.ceil(totalPosts / POSTS_PER_PAGE))
+}
+
+export function paginate<T>(items: T[], page: number): T[] {
+    const start = (page - 1) * POSTS_PER_PAGE
+    return items.slice(start, start + POSTS_PER_PAGE)
+}
+
+/** Page numbers 2..N for generateStaticParams (page 1 is the base route). */
+export function extraPageNumbers(totalPosts: number): string[] {
+    const count = getPageCount(totalPosts)
+    return Array.from({ length: count - 1 }, (_, i) => String(i + 2))
+}
+
 export async function getPost(slug: string): Promise<Post | null> {
     const filePath = path.join(POSTS_DIR, `${slug}.md`)
     if (!fs.existsSync(filePath)) return null

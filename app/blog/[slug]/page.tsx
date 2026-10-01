@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllPostSlugs, getPost } from '@/lib/posts'
+import SwatchCover from '@/components/SwatchCover'
 import { Calendar, Clock, Tag, ArrowLeft, ArrowRight } from 'lucide-react'
 import type { Metadata } from 'next'
 
@@ -43,7 +44,7 @@ export default async function PostPage(props: Props) {
                         className="w-full h-full object-cover"
                     />
                 ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-primary-900/60 to-accent-900/60" />
+                    <SwatchCover seed={post.slug} />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
             </div>
