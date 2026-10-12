@@ -27,7 +27,7 @@ A modern, professional portfolio website showcasing AI projects, research public
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/rik-banerjee/portfolio.git
+git clone https://github.com/rikbanerjee/rikngeekOne.git
 cd rikngeekOne
 ```
 
@@ -309,7 +309,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 Rik Banerjee
 - LinkedIn: [https://www.linkedin.com/in/rik-banerjee/](https://www.linkedin.com/in/rik-banerjee/)
 - Email: contact@rikbanerjee.com
-- GitHub: [github.com/rik-banerjee](https://github.com/rik-banerjee)
+- GitHub: [github.com/rikbanerjee](https://github.com/rikbanerjee)
 
 ---
 

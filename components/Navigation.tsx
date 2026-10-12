@@ -10,6 +10,7 @@ const navItems = [
   { name: 'Blog', href: '/blog' },
   { name: 'STEM Ed', href: '/#stem' },
   { name: 'Resume', href: '/#resume' },
+  { name: 'Working with Me', href: '/working-with-rik' },
 ]
 
 export default function Navigation() {

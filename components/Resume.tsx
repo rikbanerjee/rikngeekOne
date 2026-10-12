@@ -109,7 +109,7 @@ export default function Resume() {
             <span className="gradient-text">Resume</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Director of Engineering | Gen AI & Agentic AI | 18+ Years Transforming Enterprise Operations
+            Lead Director of Engineering and Product | Gen AI & Agentic AI | 18+ Years Transforming Enterprise Operations
           </p>
         </motion.div>
 

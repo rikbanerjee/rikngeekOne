@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="How Rik Banerjee works: communication, leadership, decisions, and how his teams use AI.">
+<title>Working with Rik</title>
+<link rel="canonical" href="https://rikngeek.com/working-with-rik">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Working with Rik: a user manual">
+<meta property="og:description" content="How Rik Banerjee works: communication, leadership, decisions, and how his teams use AI.">
+<meta property="og:url" content="https://rikngeek.com/working-with-rik">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Schibsted+Grotesk:wght@500;700;800&display=swap">
+<style>
+/* Layout: a personal operating manual. Wide screens get a sticky chapter rail beside a ~68ch reading column; the hero pairs the title with a store-receipt TL;DR. */
+:root {
+  --paper: #f5f6f8;
+  --surface: #ffffff;
+  --ink: #16203a;
+  --muted: #586079;
+  --rule: #d9dde6;
+  --accent: #a24c06;      /* marigold, deepened for text contrast */
+  --marigold: #f0a202;    /* fills, rules, barcode highlight */
+  --fill-bg: #fdeec8;
+  --fill-ink: #6b3a00;
+  --note-bg: #eef1f8;
+  --note-rule: #8a93ad;
+
+  --display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --step--1: 0.84rem;
+  --step-0: 1.06rem;
+  --step-1: 1.3rem;
+  --step-2: 1.7rem;
+  --step-hero: clamp(2.7rem, 7vw, 5rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1422;
+    --surface: #171e30;
+    --ink: #e6e9f1;
+    --muted: #9aa2b8;
+    --rule: #2a3349;
+    --accent: #f6b740;
+    --marigold: #f0a202;
+    --fill-bg: #3a2c0c;
+    --fill-ink: #ffd27a;
+    --note-bg: #1b2338;
+    --note-rule: #5f6a88;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f1422;
+  --surface: #171e30;
+  --ink: #e6e9f1;
+  --muted: #9aa2b8;
+  --rule: #2a3349;
+  --accent: #f6b740;
+  --marigold: #f0a202;
+  --fill-bg: #3a2c0c;
+  --fill-ink: #ffd27a;
+  --note-bg: #1b2338;
+  --note-rule: #5f6a88;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: var(--step-0);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--marigold); outline-offset: 3px; border-radius: 2px; }
+
+.page { max-width: 1140px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 40px); padding-block: 0 96px; }
+
+/* Hero */
+.hero {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+  gap: 48px; align-items: start;
+  padding-block: clamp(40px, 7vw, 88px) clamp(32px, 5vw, 56px);
+  border-bottom: 1px solid var(--rule);
+}
+.hero-text { min-width: 0; display: grid; gap: 20px; }
+.eyebrow {
+  margin: 0; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
+}
+h1 {
+  margin: 0; font-family: var(--display); font-weight: 800; font-size: var(--step-hero);
+  line-height: 0.95; letter-spacing: -0.035em; text-wrap: balance;
+}
+h1 span { display: block; color: var(--muted); font-weight: 500; letter-spacing: -0.02em; }
+.lede { margin: 0; font-size: var(--step-1); line-height: 1.5; max-width: 34ch; text-wrap: pretty; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 4px 0 0; font-family: var(--mono); font-size: 0.78rem; }
+.meta div { display: grid; gap: 2px; }
+.meta dt { color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.7rem; }
+.meta dd { margin: 0; font-variant-numeric: tabular-nums; }
+
+/* Receipt TL;DR */
+.receipt {
+  position: relative;
+  background: var(--surface); color: var(--ink);
+  font-family: var(--mono); font-size: 0.8rem; line-height: 1.5;
+  padding: 22px 22px 26px;
+  box-shadow: 0 1px 0 var(--rule), 0 14px 30px -18px rgba(10, 18, 40, 0.35);
+  transform: rotate(1.2deg);
+  --tooth: 7px;
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / calc(2 * var(--tooth)) 100%;
+          mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / calc(2 * var(--tooth)) 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .receipt { animation: print 900ms cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes print { from { clip-path: inset(0 0 55% 0); } to { clip-path: inset(0 0 0 0); } }
+}
+.receipt .r-head { text-align: center; display: grid; gap: 2px; padding-bottom: 12px; border-bottom: 1px dashed var(--rule); }
+.receipt .r-head strong { font-size: 0.95rem; letter-spacing: 0.06em; }
+.receipt .r-head span { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.04em; }
+.r-rows { list-style: none; margin: 0; padding: 12px 0; display: grid; gap: 5px; border-bottom: 1px dashed var(--rule); }
+.r-rows li { display: flex; gap: 6px; align-items: baseline; min-width: 0; }
+.r-rows li span:first-child { min-width: 0; }
+.r-rows li i { flex: 1; border-bottom: 1px dotted var(--note-rule); transform: translateY(-4px); min-width: 12px; }
+.r-rows li b { font-weight: 700; text-align: right; white-space: nowrap; }
+.r-total { display: flex; justify-content: space-between; padding: 10px 0 14px; font-weight: 700; font-size: 0.9rem; }
+.r-total b { color: var(--accent); }
+.barcode {
+  height: 38px; margin: 2px 6px 6px;
+  background:
+    repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 4px, var(--ink) 4px 5px, transparent 5px 8px, var(--ink) 8px 11px, transparent 11px 12px, var(--ink) 12px 13px, transparent 13px 17px);
+}
+.r-foot { text-align: center; color: var(--muted); font-size: 0.72rem; letter-spacing: 0.12em; }
+
+/* Body layout */
+.layout { display: grid; grid-template-columns: 200px minmax(0, 68ch); gap: clamp(32px, 6vw, 80px); padding-top: 48px; }
+.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 64px); align-self: start; font-family: var(--display); font-size: 0.9rem; }
+.toc p { margin: 0 0 10px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; border-left: 1px solid var(--rule); }
+.toc a { display: block; padding: 4px 0 4px 14px; margin-left: -1px; border-left: 2px solid transparent; color: var(--muted); text-decoration: none; line-height: 1.35; }
+.toc a:hover { color: var(--ink); }
+.toc a.on { color: var(--ink); border-left-color: var(--marigold); font-weight: 700; }
+
+.doc { min-width: 0; display: grid; gap: 64px; }
+.doc section { display: grid; gap: 18px; scroll-margin-top: 72px; }
+.doc h2 {
+  margin: 0; font-family: var(--display); font-weight: 800; font-size: var(--step-2);
+  letter-spacing: -0.02em; line-height: 1.15; text-wrap: balance;
+}
+.doc h3 {
+  margin: 10px 0 0; font-family: var(--display); font-weight: 700; font-size: var(--step-1);
+  letter-spacing: -0.01em; line-height: 1.25;
+}
+.doc p { margin: 0; text-wrap: pretty; }
+.doc ul { margin: 0; padding-left: 1.2em; display: grid; gap: 10px; }
+.doc li::marker { color: var(--marigold); }
+.doc strong { font-weight: 600; }
+
+/* Definition-style principle lists */
+.tenets { list-style: none; padding: 0 !important; margin: 0; display: grid; gap: 0 !important; border-top: 1px solid var(--rule); }
+.tenets li { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 6px 24px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.tenets li > span:first-child { font-family: var(--display); font-weight: 700; font-size: 1.02rem; line-height: 1.35; }
+.tenets li > span:last-child { min-width: 0; }
+
+.pullquote {
+  margin: 4px 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--marigold);
+  font-size: var(--step-1); line-height: 1.45; font-style: italic;
+}
+
+.survey { width: 100%; border-collapse: collapse; font-size: 0.98rem; }
+.survey th, .survey td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.survey th { font-family: var(--mono); font-weight: 500; font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+
+.success { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.success div { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.success h3 { margin: 0; padding-bottom: 8px; border-bottom: 2px solid var(--marigold); font-size: 1.05rem; }
+.success ul { font-size: 0.95rem; gap: 7px; }
+
+.changelog { font-family: var(--mono); font-size: 0.8rem; display: grid; gap: 6px; margin: 0; }
+.changelog div { display: grid; grid-template-columns: 4.5rem 7rem minmax(0, 1fr); gap: 12px; }
+.changelog dt { color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+.changelog dd { margin: 0; }
+
+.sign-off { padding-top: 32px; border-top: 1px solid var(--rule); display: grid; gap: 14px; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 22px; font-family: var(--mono); font-size: 0.85rem; }
+
+@media (max-width: 960px) {
+  .layout { grid-template-columns: minmax(0, 1fr); padding-top: 32px; }
+  .toc { position: static; }
+  .toc ol { display: flex; flex-wrap: wrap; gap: 6px; border-left: none; }
+  .toc a { padding: 4px 10px; margin: 0; border: 1px solid var(--rule); border-radius: 999px; font-size: 0.82rem; }
+  .toc a.on { border-color: var(--marigold); }
+  .success { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .receipt { max-width: 340px; transform: rotate(0.6deg); }
+  .tenets li { grid-template-columns: minmax(0, 1fr); }
+  .changelog div { grid-template-columns: 3.5rem minmax(0, 1fr); }
+  .changelog div dd:first-of-type { grid-column: 2; }
+}
+</style>
+
+</head>
+<body>
+<div class="page" id="page">
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="eyebrow"><a href="https://rikngeek.com" style="color:inherit;text-decoration:none">rikngeek.com</a> · Operating manual</p>
+      <h1>Working with Rik <span>a user manual</span></h1>
+      <p class="lede">How I think, how I communicate, and what I expect from myself and from you. Read it before our first 1:1, then tell me where it’s wrong.</p>
+      <dl class="meta">
+        <div><dt>Version</dt><dd>1.0</dd></div>
+        <div><dt>First published</dt><dd>October 2026</dd></div>
+        <div><dt>Last updated</dt><dd>October 2026</dd></div>
+        <div><dt>Read time</dt><dd>About 10 min</dd></div>
+      </dl>
+    </div>
+
+    <aside class="receipt" aria-label="The quick version">
+      <div class="r-head">
+        <strong>WORKING WITH RIK</strong>
+        <span>BOSTON AREA · TXN #001</span>
+        <span>THE QUICK VERSION</span>
+      </div>
+      <ul class="r-rows">
+        <li><span>Headline first</span><i></i><b>ALWAYS</b></li>
+        <li><span>Bring a recommendation</span><i></i><b>YES</b></li>
+        <li><span>Status updates</span><i></i><b>WRITTEN</b></li>
+        <li><span>Meetings are for</span><i></i><b>DECISIONS</b></li>
+        <li><span>Context : execution</span><i></i><b>85 : 15</b></li>
+        <li><span>Bad news</span><i></i><b>EARLY</b></li>
+        <li><span>Feedback</span><i></i><b>BOTH WAYS</b></li>
+      </ul>
+      <div class="r-total"><span>TOTAL</span><b>TRUST, EARNED</b></div>
+      <div class="barcode" aria-hidden="true"></div>
+      <div class="r-foot">THANK YOU FOR READING</div>
+    </aside>
+  </header>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Contents">
+      <p>Contents</p>
+      <ol>
+        <li><a href="#about-this">About this page</a></li>
+        <li><a href="#about-me">About me</a></li>
+        <li><a href="#motivates">What motivates me</a></li>
+        <li><a href="#values">My values</a></li>
+        <li><a href="#leadership">What leadership means</a></li>
+        <li><a href="#communicate">How I communicate</a></li>
+        <li><a href="#information">How I process information</a></li>
+        <li><a href="#reports">How I work with my team</a></li>
+        <li><a href="#ai">How we use AI</a></li>
+        <li><a href="#beliefs">Product &amp; engineering beliefs</a></li>
+        <li><a href="#success">How I define success</a></li>
+      </ol>
+    </nav>
+
+    <main class="doc">
+
+      <section id="about-this">
+        <h2>About this page</h2>
+        <p>Every new working relationship spends its first few months on the same discovery: how does this person like to get information, what do they mean when they push back, what will annoy them, and what earns their trust. This page shortcuts that. It started as a note for the people on my teams. I’m publishing it so anyone thinking about working with me knows what they’re signing up for.</p>
+        <p>It describes how I actually work today, including the parts I’m still improving. It’s a living document, versioned like software. If you find a bug, tell me.</p>
+        <p>The format is borrowed, with thanks, from Luc Levesque’s <a href="https://docs.superhuman.com/@luc-levesque/blueprint-for-leaders-managers-communicate-your-quirks" target="_blank" rel="noopener">Blueprint for leaders and managers</a>. If you lead people, I’d recommend writing your own.</p>
+      </section>
+
+      <section id="about-me">
+        <h2>About me</h2>
+        <p>I’m an engineer who ended up leading engineers, and I never fully stopped building. I’m Lead Director of Engineering and Product at CVS Health, where my teams build the technology inside our stores and pharmacies: point of sale, pharmacy workflows, store devices, and the AI that is starting to run at the edge. That work reaches more than 9,000 stores, across core CVS locations and CVS pharmacies inside Target.</p>
+        <p>Much of my career has been about modernizing systems that can’t go down. One example: rather than rip out Toshiba POS, we rebuilt the pharmacy experience as a modern web platform that ran alongside it. Toshiba kept payments and front-store checkout. The prescription journey and health data sync moved to modern web apps and microservices. That bridge is what made the later POS migration safe, and I still approach most modernization problems that way.</p>
+        <p>Outside the day job I build things, mostly to learn:</p>
+        <ul>
+          <li><strong>EzyUpload</strong>, an AI platform for eCommerce product images.</li>
+          <li><strong>RetailAgentOS</strong>, an open-source protocol for agent-to-agent commerce.</li>
+          <li><strong>ezyReminder</strong>, a calendar and reminder app for iPhone.</li>
+          <li><strong>The Custom Hub</strong>, a desi-themed merch shop that became an Etsy Star Seller.</li>
+        </ul>
+        <p>I write about enterprise AI and retail tech on <a href="https://substack.com/@rikngeek" target="_blank" rel="noopener">Substack</a> and <a href="https://x.com/im_Rik007" target="_blank" rel="noopener">X</a>, and I’ve co-taught hands-on AI workshops for non-technical audiences in my community.</p>
+        <p>My family is from Kolkata. I live in the Boston area with my wife and kid. My weekends are a mix of family time, coding sessions with AI tools, and <em>adda</em> with friends: the long, wandering Bengali conversations over tea that can cover cricket, politics and startups in one sitting. That circle of friends is mostly thanks to my wife, who has a huge social network. It brings a lot of positive energy into our lives, and a wonderfully diverse mix of people and perspectives.</p>
+      </section>
+
+      <section id="motivates">
+        <h2>What motivates me</h2>
+        <p>I’ve always learned from people a few steps ahead of me. Since my engineering days, the case studies and life stories of great minds in technology, science and finance have been my main source of inspiration. In technology, Steve Jobs and Bill Gates inspired me then and still do today. From Jobs I learned to obsess over the customer experience. From Gates I learned how a platform can change the global tech landscape, the way Windows and Internet Explorer did, and how owning the operating system shapes the whole competitive game. “OS” is still my favorite word in technology. It’s no accident that my open-source project is called RetailAgentOS.</p>
+        <p>Some of my favorite lessons came from the cricket field. Sourav Ganguly’s stories showed me how a captain can turn a talented group into a team that believes it can win anywhere. Harsha Bhogle showed me how much a well-told story can teach.</p>
+        <p>What they gave me was more useful than any single technique: a growth mindset. In their stories, every failure was a lesson and every success rested on years of steady learning. That habit hasn’t stopped. Today it continues through podcasts. My favorites are Raj Shamani’s, Moonshots, and Nikhil Kamath’s.</p>
+        <p>In my own work, the moment I chase is a quiet one. Retail is the most honest place to build software. Nobody in a store praises the checkout system. A pharmacist with twelve people in line doesn’t care about our architecture. When the technology works, nobody notices it: the customer gets their prescription, the associate looks up and smiles, and the line moves.</p>
+        <p class="pullquote">That invisible moment is what I work for. Software so dependable that the people using it forget it’s there.</p>
+        <p>I moved into leadership because I wanted more of those moments than I could build by myself. I still build on the side because it keeps me honest about how hard they are to create.</p>
+      </section>
+
+      <section id="values">
+        <h2>My values</h2>
+        <ul class="tenets">
+          <li><span>Build to understand</span><span>I learn a technology by shipping something with it. I expect leaders on my team to stay close enough to the work to hold an informed opinion.</span></li>
+          <li><span>Context is the job</span><span>I call it the 85/15 principle. Most of the quality of any output, from an engineer or from an AI model, comes from the context and the brief. Execution is the other 15. When something goes wrong, I check the brief first, starting with mine.</span></li>
+          <li><span>Respect the floor</span><span>The store, the pharmacy counter, the associate at 5pm on a Saturday. Every decision gets tested against real people doing real work.</span></li>
+          <li><span>Say the true thing early</span><span>Integrity is mostly timing. A risk raised in week two is a gift. The same risk raised in week ten is a crisis.</span></li>
+        </ul>
+      </section>
+
+      <section id="leadership">
+        <h2>What leadership means to me</h2>
+        <p>Every autumn in Kolkata, neighborhoods build pandals for Durga Puja: temporary temples of bamboo, cloth and light, some as elaborate as a building. Nobody hands out a Gantt chart. Artisans in Kumartuli spend months shaping the idols. Carpenters raise the frame. Electricians string thousands of lights. Volunteers go door to door raising money. On the first night, the whole thing comes alive.</p>
+        <p>What holds that together is a shared picture of the festival everyone wants to stand inside. Each person can see where their piece fits, so they organize themselves around it.</p>
+        <p>Large IT programs work the same way. Modernizing thousands of stores means orchestrating dozens of teams at once: POS, pharmacy, network, devices, security, vendors and store operations. No project plan can choreograph every move. Orchestration works when every team sees the same finished picture and knows when its piece has to land. Painting that picture is what leadership means to me, and I hold myself and every leader on my team to three things:</p>
+        <ul class="tenets">
+          <li><span>Leaders paint the picture</span><span>The vision and the mission are clear enough that anyone on the team can find their part in it without being assigned one.</span></li>
+          <li><span>Leaders write the brief</span><span>Context, constraints, and what good looks like. Most of the “execution problems” I’ve seen were briefing problems.</span></li>
+          <li><span>Leaders stay close to the ground</span><span>Walk the store, read the incident report, use the product. Know what’s working and what isn’t, and adapt.</span></li>
+        </ul>
+      </section>
+
+      <section id="communicate">
+        <h2>How I communicate and process feedback</h2>
+        <ul>
+          <li><strong>Headline first.</strong> Give me the answer, then the explanation. If I ask “did it ship?”, start with yes or no. I’ll do the same for you.</li>
+          <li><strong>Write it down for decisions.</strong> A one-page narrative with data beats twenty slides. Writing forces clarity, and it lets people who weren’t in the room catch up.</li>
+          <li><strong>Channels.</strong> Teams or Slack for quick questions, email for FYI, and a call or text if it’s urgent. Urgent means a P1 or P2 incident with reports coming in from more than 10 stores.</li>
+          <li><strong>Feedback goes both ways.</strong> I mean it when I ask. Direct is good; cruel isn’t. The person receiving feedback decides what to do with it, but they close the loop with the person who gave it.</li>
+          <li><strong>Strong opinions, loosely held.</strong> I’ll share a view early. Push back with data and I’ll change my mind. When I push back on your proposal, it means I’m taking it seriously.</li>
+          <li><strong>Bad news early.</strong> I’d much rather hear “we’re red” in week two than in week ten. Nobody gets in trouble with me for raising a risk.</li>
+        </ul>
+      </section>
+
+      <section id="information">
+        <h2>How I process information</h2>
+        <ul>
+          <li><strong>Macro before micro.</strong> I need to see where a detail fits in the larger system before I can engage with it. If I stop you to ask “what’s the decision here?” or “where does this sit in the architecture?”, I’m orienting myself, not dismissing you.</li>
+          <li><strong>I play it back.</strong> I’ll summarize what I heard to check I got it right. It can sound like I’m repeating you. I’m connecting the dots.</li>
+          <li><strong>I prototype to think.</strong> Sometimes I’ll show up with a working sketch, a script, or an AI-built mockup. Treat it as a question, not a spec.</li>
+          <li><strong>Under pressure, I stay calm and think.</strong> I keep the conversation within a small core team, lay out the options, and evaluate them together before we act. A calm room makes better decisions than a loud one.</li>
+        </ul>
+      </section>
+
+      <section id="reports">
+        <h2>How I work with my team</h2>
+        <h3>Trust by default</h3>
+        <p>I assume you know what you’re doing. If something looks off, I’ll tell you what concerns me and may zoom in for a while to help. When things are back on track, I zoom out. Neither of us enjoys me being zoomed in, so if it keeps happening we’ll talk about why.</p>
+        <h3>Decisions</h3>
+        <p>Bring me a recommendation, not only a problem. I’ll usually ask what you’d decide and what you need from me to decide it. If a decision is reversible, make it and tell me after. If it’s a one-way door, such as a vendor contract, a platform choice, or anything touching patient data or payments, bring me in early.</p>
+        <h3>Your first team is your peers</h3>
+        <p>If you lead a team and report to me, the people beside you are your first team. Your own team is how you deliver on the outcomes that group shares. If we lose sight of that, I’ll say so and we’ll reset.</p>
+        <h3>1:1s and meetings</h3>
+        <p>I’ll be upfront: I’m not a big fan of formal 1:1s, and I know that’s a controversial view. If our team processes are working, status, decisions and blockers already have a home, and a standing 1:1 adds little. What I do want is an informal conversation with each of my direct reports, almost every week, where we talk as people first. That’s where personal growth and career stories belong. And my door is always open. If you need a 1:1, ask and you’ll get one.</p>
+        <p>Meetings are for decisions, alignment and ideas. Status belongs in writing. I’ll do skip-levels and keep open time on my calendar for anyone on the team. If someone brings me an issue about you, I’ll coach them to raise it with you directly, and I’ll have your back.</p>
+        <h3>Growth</h3>
+        <p>I care about where you’re headed, not only what you’re delivering this quarter. I never want to be the bottleneck. I run a team of teams, and I want each leader on it to be the face of their area. My job is to put you in front of the room, promote your work, and coach you in the background.</p>
+        <p>Learning runs both ways. I learn as much from my leaders as they learn from me, and with AI changing how all of us work, that two-way street matters more than ever. Whatever happens, I’ll be on your side.</p>
+        <p>One ask in return: if my boss reaches out to you directly and we have to commit to a delivery, give me a heads-up. I hate being caught off guard. We are one team.</p>
+        <h3>Where I need help</h3>
+        <p>Fires from leadership come in waves, and a week of escalations can knock our planned work off track. Putting out fires while keeping the team running like a well-oiled machine is a balance I’m always working on. What helps me most is a clear plan for handling incoming fires: a simple triage path, a small group that owns them, and an early flag from you when the roadmap starts to slip. That way the rest of the team keeps moving.</p>
+      </section>
+
+      <section id="ai">
+        <h2>How we use AI on my teams</h2>
+        <p>I’ve spent the last few years deploying AI at enterprise scale, from agentic workflows to models running on store devices. These are the ground rules I set.</p>
+        <ul class="tenets">
+          <li><span>Use it</span><span>I expect everyone, engineers and non-engineers, to use AI tools in their daily work. Not using them is the bigger risk.</span></li>
+          <li><span>You own the output</span><span>“The AI wrote it” is never the answer. If your name is on it, you’ve read it, checked it, and you stand behind it.</span></li>
+          <li><span>Share the brief</span><span>When you share AI-assisted work, share the context and prompt that produced it. That’s the 85 percent, and it’s what the rest of us can learn from.</span></li>
+          <li><span>Production is a system</span><span>A demo is a prompt. Production needs evaluation, guardrails, monitoring, and a path to a human, especially when it touches customers, patients or money.</span></li>
+          <li><span>Agents will shop</span><span>Software agents will soon buy and sell on behalf of people. Retailers need open standards for that, which is why I build RetailAgentOS in the open.</span></li>
+        </ul>
+      </section>
+
+      <section id="beliefs">
+        <h2>What I believe about product and engineering</h2>
+        <ul>
+          <li><strong>The store is the real production environment.</strong> Peak hours, flaky networks, a line at the counter. Design for offline, for speed at the edge, and for the associate’s next thirty seconds.</li>
+          <li><strong>Modernize with bridges, not big bangs.</strong> Wrap the legacy system, move one journey at a time, and retire the old platform once the new one has earned it.</li>
+          <li><strong>Speed is a feature.</strong> Ship small, ship often, measure. Then invest for the long term in what has proved itself.</li>
+          <li><strong>Fewer priorities, actually finished.</strong> Know the three things that matter most this quarter. Protect them from everything else.</li>
+          <li><strong>Platforms earn their keep.</strong> A platform is worth building when it makes the next feature faster. Experiments drive features, features drive the platform, and the platform makes the next experiment cheap.</li>
+          <li><strong>Automate the toil.</strong> If we do something by hand three times, we script it. Removing operational toil matters as much as removing user pain. It’s how a team scales.</li>
+          <li><strong>Engineers and product build it together.</strong> Engineers often have the best ideas for hard problems. Product and design turn them into something people love to use. All three matter.</li>
+        </ul>
+      </section>
+
+      <section id="success">
+        <h2>How I define success</h2>
+        <p>I’m not formulaic about it, but these are the qualities I look for and try to live up to myself.</p>
+        <div class="success">
+          <div>
+            <h3>Great leaders</h3>
+            <ul>
+              <li>Paint a clear picture and write a clear brief</li>
+              <li>Build teams that would succeed without them</li>
+              <li>Earn trust through consistency and transparency</li>
+              <li>Create psychological safety</li>
+              <li>Balance creativity with structure</li>
+              <li>Deliver results, and help others move fast</li>
+              <li>Hold strong opinions and update them</li>
+              <li>Put shared outcomes ahead of personal wins</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Great teams</h3>
+            <ul>
+              <li>Deliver what they commit to</li>
+              <li>Decide fast; disagree and commit</li>
+              <li>Bring diverse perspectives</li>
+              <li>Obsess over the customer and the associate</li>
+              <li>Try bold ideas and learn from the misses</li>
+              <li>Help each other; leave no one behind</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Great engineers</h3>
+            <ul>
+              <li>Challenge the status quo, constructively</li>
+              <li>Balance craft with execution</li>
+              <li>Turn ambiguity into something concrete</li>
+              <li>Write clearly</li>
+              <li>Understand the business, not only the code</li>
+              <li>Use the best tools available, AI included</li>
+              <li>Are humble, kind, and fun to work with</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="sign-off" aria-label="Changelog and contact">
+        <p>If something here doesn’t match your experience of working with me, tell me. That’s how this page gets better.</p>
+        <dl class="changelog">
+          <div><dt>v1.0</dt><dd>Oct 2026</dd><dd>First public version.</dd></div>
+        </dl>
+        <div class="links">
+          <a href="https://rikngeek.com">rikngeek.com</a>
+          <a href="https://substack.com/@rikngeek" target="_blank" rel="noopener">substack.com/@rikngeek</a>
+          <a href="https://x.com/im_Rik007" target="_blank" rel="noopener">@im_Rik007</a>
+          <a href="https://www.linkedin.com/in/rik-banerjee/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script>
+(function () {
+  // Highlight the current chapter in the contents rail
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (l) { l.classList.remove('on'); });
+          map[e.target.id].classList.add('on');
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    Object.keys(map).forEach(function (id) { var s = document.getElementById(id); if (s) io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>

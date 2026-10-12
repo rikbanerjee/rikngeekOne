@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail, Sparkles } from 'lucide-react'
+import { ArrowDown, BookOpen, Github, Linkedin, Mail, Sparkles } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -24,7 +24,7 @@ export default function Hero() {
           >
             <Sparkles className="hidden sm:block w-4 h-4 shrink-0 text-primary-400" />
             <span className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-              <span className="block">Sr. Technology Leader @ CVS Health</span>
+              <span className="block">Lead Director of Engineering and Product @ CVS Health</span>
               <span className="block">Gen AI • Edge AI • Physical AI at Retail Scale</span>
             </span>
           </motion.div>
@@ -48,7 +48,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
           >
-            Director of Engineering at CVS Health transforming enterprise operations through Gen AI and Agentic AI—delivering 
+            Lead Director of Engineering and Product at CVS Health transforming enterprise operations through Gen AI and Agentic AI—delivering 
             $90M+ annual savings at scale. Leading teams of 60-100+ engineers building AI systems that power America&apos;s 
             largest pharmacy retailer, serving 120M+ customers and 300K colleagues daily.
           </motion.p>
@@ -73,6 +73,13 @@ export default function Hero() {
             >
               View Resume
             </a>
+            <a
+              href="/working-with-rik"
+              className="px-8 py-4 glass-effect hover:bg-white/10 text-white rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
+            >
+              Working with Me
+              <BookOpen className="w-5 h-5" />
+            </a>
           </motion.div>
 
           {/* Social Links */}
@@ -91,7 +98,7 @@ export default function Hero() {
               <Linkedin className="w-6 h-6 text-gray-300" />
             </a>
             <a
-              href="https://github.com/rik-banerjee"
+              href="https://github.com/rikbanerjee"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass-effect rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110"
