@@ -11,6 +11,7 @@ const stemResources = [
     level: 'Beginner',
     ageGroup: '8-12 years',
     color: 'from-blue-500 to-cyan-500',
+    href: 'https://kidquestos.com/electronics?area=ai',
   },
   {
     title: 'Build Your First Robot',
@@ -19,6 +20,7 @@ const stemResources = [
     level: 'Intermediate',
     ageGroup: '10-14 years',
     color: 'from-purple-500 to-pink-500',
+    href: 'https://kidquestos.com/electronics?area=robots',
   },
   {
     title: 'Coding Adventures: Python for Young Minds',
@@ -27,6 +29,7 @@ const stemResources = [
     level: 'Beginner',
     ageGroup: '7-11 years',
     color: 'from-emerald-500 to-teal-500',
+    href: 'https://kidquestos.com/',
   },
   {
     title: 'Science Experiments at Home',
@@ -35,6 +38,7 @@ const stemResources = [
     level: 'All Levels',
     ageGroup: '6-14 years',
     color: 'from-amber-500 to-orange-500',
+    href: 'https://kidquestos.com/subjects/stem',
   },
 ]
 
@@ -97,10 +101,15 @@ export default function STEMEducation() {
               </div>
 
               {/* CTA */}
-              <button className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors duration-300">
+              <a
+                href={resource.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors duration-300"
+              >
                 <Play className="w-4 h-4" />
                 <span className="text-sm font-medium">Start Learning</span>
-              </button>
+              </a>
             </motion.div>
           ))}
         </div>
